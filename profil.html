@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WISCONSIN'S LIBRARY</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        body {
+            font-family: "Comic Sans MS", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: #4d4d4d;
+        }
+
+        header {
+            background-color: #00b7ff;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        nav {
+            background: #000658;
+            color: #fff;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+            background: linear-gradient(135deg, #e0f7fa, #ffffff);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
+
+        .description-card, .vision-mission, .contact-section {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #00a2ff;
+            text-align: center;
+        }
+
+        .large-image {
+            width: 50%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: #00b7ff;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .social-icons div {
+            display: flex;
+            align-items: center;
+            margin: 15px;
+        }
+
+        .social-icons img {
+            width: 20px; 
+            height: auto;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Profile</h1>
+    </header>
+    <nav>
+        <div class="logo">
+          <img src="Gambar_Perpus.png" alt="Logo Aplikasi Perpustakaan" />
+        </div>
+        <ul id="nav-links">
+          <li><a href='beranda.html'>Home</a></li>
+          <li><a href='profil.html'>Profile</a></li>
+          <li><a href='login.html'>Login</a></li>
+          <li><a href='koleksi.html'>Collection</a></li>
+          <li><a href='transaksi.html'>Transaction</a></li>
+        </ul>
+      </nav>
+
+    <main>
+        <img src="Logo_Perpus.png" alt="Gambar Perpustakaan" class="large-image" />
+        <div class="description-card">
+            <h2>About Us✨</h2>
+            <p>
+                WISCONSIN'S LIBRARY adalah platform yang dirancang untuk memudahkan pengguna dalam mengelola transaksi peminjaman buku. Dengan antarmuka yang sederhana dan intuitif, pengguna dapat dengan mudah mencari, meminjam, dan mengembalikan buku. 📖💖
+            </p>
+            <p>
+                Kami percaya bahwa akses terhadap pengetahuan dan informasi sangat penting untuk perkembangan individu dan masyarakat. Oleh karena itu, WISCONSIN'S LIBRARY hadir sebagai solusi bagi para pencinta buku, pelajar, dan masyarakat umum untuk mendapatkan kemudahan dalam mengakses koleksi buku yang beragam. Kami menyediakan berbagai jenis buku, mulai dari fiksi, non-fiksi, hingga buku akademis yang relevan untuk kebutuhan belajar.
+            </p>
+            <p>
+                Di WISCONSIN'S LIBRARY, kami juga berkomitmen untuk mendorong minat baca di kalangan masyarakat. Melalui berbagai fitur menarik, pengguna dapat menerima rekomendasi buku berdasarkan minat mereka, mengikuti berita terbaru tentang koleksi buku, dan berpartisipasi dalam diskusi serta acara terkait literasi. Kami berusaha menciptakan komunitas yang mendukung pembelajaran dan berbagi pengetahuan.
+            </p>
+            <p>
+                Dengan keamanan dan kenyamanan sebagai prioritas utama, kami memastikan bahwa setiap transaksi peminjaman buku dilakukan dengan aman dan transparan. Tim kami selalu siap membantu pengguna dengan pertanyaan atau masalah yang mungkin timbul selama proses peminjaman. Bergabunglah dengan kami di Libra Trove dan temukan pengalaman membaca yang menyenangkan dan bermanfaat! 🌟📚
+            </p>
+        </div>
+        <div class="vision-mission">
+            <h2>Visi dan Misi 🌟</h2>
+            <h3>Visi:</h3>
+            <p>
+                Menjadi aplikasi perpustakaan terdepan yang memudahkan akses dan
+                pengelolaan informasi buku bagi seluruh masyarakat. 🌍
+            </p>
+            <h3>Misi:</h3>
+            <ul>
+                <li>Menyediakan platform yang user-friendly untuk semua pengguna. 😊</li>
+                <li>Mempermudah proses peminjaman dan pengembalian buku. 📅</li>
+                <li>Memberikan informasi terkini mengenai koleksi buku. 📚</li>
+                <li>Mendorong minat baca masyarakat melalui kemudahan akses. 📖✨</li>
+            </ul>
+        </div>
+
+        <!-- New Contact Section -->
+        <div class="contact-section">
+            <h2>Contact Us</h2>
+            <p>Jika Anda memiliki pertanyaan atau saran, silakan hubungi kami melalui media sosial berikut:</p>
+            <div class="social-icons">
+                <div>
+                    <a href="https://wa.me/your_whatsapp_number" target="_blank">
+                        <img src="WhatsApp.svg.png" alt="WhatsApp" />
+                        085771780758
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/your_instagram_username" target="_blank">
+                        <img src="Instagram.png" alt="Instagram" />
+                        @WISCONSIN'S_LIBRARY
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025. MUHAMMAD FAQIH AR RASYID | 241011701201</p>
+      </footer>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WISCONSIN'S LIBRARY</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script sign up.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Login Form</h1>
+    </header>
+    <nav>
+        <div class="logo">
+          <img src="Gambar_Perpus.png" alt="Logo Aplikasi Perpustakaan" />
+        </div>
+        <ul id="nav-links">
+          <li><a href='beranda.html'>Home</a></li>
+          <li><a href='profil.html'>Profile</a></li>
+          <li><a href='login.html'>Login</a></li>
+          <li><a href='koleksi.html'>Collection</a></li>
+          <li><a href='transaksi.html'>Transaction</a></li>
+        </ul>
+      </nav>
+
+    <main>
+        <div class="card">
+            <h2>Login Dulu Yuk👋🏻</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" required />
+                </div>
+                <div class="input-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" required />
+                </div>
+                <br>
+                <button type="submit">Login</button>
+            </form>
+            <div class="sign-up">
+                <p>Belum punya akun? <a href="Sign.html">Sign Up</a></p>
+            </div>
+        </div>
+
+        <!-- Alert Kustom -->
+        <div id="customAlert" class="alert" style="display: none">
+            <div class="alert-content">
+                <span id="alertMessage"></span>
+                <button id="closeAlert" class="close-button">×</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025. MUHAMMAD FAQIH AR RASYID | 241011701201</p>
+      </footer>
+
+</body>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

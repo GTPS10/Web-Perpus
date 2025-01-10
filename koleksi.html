@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WISCONSIN'S LIBRARY</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      h1 {
+        margin: 0;
+        font-size: 36px; 
+      }
+      .book-collection {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 20px;
+      }
+      .book-card {
+        background-color: #ffffff;
+        border: 2px solid navy;
+        border-radius: 15px;
+        margin: 10px;
+        padding: 15px;
+        width: 180px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
+      .book-card:hover {
+        transform: scale(1.05);
+      }
+      .book-image {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+      .book-title {
+        color: hsl(219, 100%, 21%);
+        font-weight: bold;
+        margin: 10px 0;
+      }
+      .book-author {
+        color: #555;
+      }
+      .button-container {
+        margin-top: 10px;
+      }
+      .button {
+        background-color: navy;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        margin-right: 5px;
+      }
+      .search-container {
+        text-align: center;
+        margin: 20px;
+      }
+      .search-input {
+        padding: 10px;
+        width: 200px;
+        border: 1px solid #1e00a3;
+        border-radius: 5px;
+      }
+      .fun-fact {
+        background-color: #f9f9f9; 
+        border: 1px solid #1e1c96; 
+        border-radius: 10px; 
+        padding: 20px; 
+        margin-top: 20px; 
+        text-align: center; 
+        font-size: 18px; 
+        color: #333; 
+      }
+      footer {
+        text-align: center;
+        padding: 15px 0;
+        background-color: #00b7ff;
+        color: #fff;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        margin-top: 20px;
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Book Collection</h1>
+    </header>
+    <nav>
+        <div class="logo">
+          <img src="Gambar_Perpus.png" alt="Logo Aplikasi Perpustakaan" />
+        </div>
+        <ul id="nav-links">
+          <li><a href='beranda.html'>Home</a></li>
+          <li><a href='profil.html'>Profile</a></li>
+          <li><a href='login.html'>Login</a></li>
+          <li><a href='koleksi.html'>Collection</a></li>
+          <li><a href='transaksi.html'>Transaction</a></li>
+        </ul>
+      </nav>
+
+    <div class="search-container">
+      <input type="text" class="search-input" placeholder="Cari judul buku..." />
+      <button class="button">Cari</button>
+    </div>
+
+    <div class="book-collection">
+      <div class="book-card">
+        <img src="Buku_1.png" alt="Buku 1" class="book-image" />
+        <div class="book-title">Perspektif Pendidikan dalam Bingkai Ilmu dan Tokoh</div>
+        <div class="book-author">Penulis: Kurniawan</div>
+        <div class="button-container">
+          <a href="#" class="button">Baca</a>
+          <a class='button' href='transaksi.html'>Pinjam</a>
+        </div>
+      </div>
+      <div class="book-card">
+        <img src="Buku_2.png" alt="Buku 2" class="book-image" />
+        <div class="book-title">Menanti Restu Langit</div>
+        <div class="book-author">Penulis: Makhasin</div>
+        <div class="button-container">
+          <a href="#" class="button">Baca</a>
+          <a class='button' href='transaksi.html'>Pinjam</a>
+        </div>
+      </div>
+      <div class="book-card">
+        <img src="Buku_3.png" alt="Buku 3" class="book-image" />
+        <div class="book-title">Iman Sebagai Basis Psikologi Pengembangan Karakter</div>
+        <div class="book-author">Penulis: Dr. H. Alivermana Wiguna, M.Ag</div>
+        <div class="button-container">
+          <a href="#" class="button">Baca</a>
+          <a class='button' href='transaksi.html'>Pinjam</a>
+        </div>
+      </div>
+      <div class="book-card">
+        <img src="Buku_4.png" alt="Buku 4" class="book-image" />
+        <div class="book-title">Keperawatan Kesehatan komunitas</div>
+        <div class="book-author">Penulis: Prima Dewi Kusmawati, S.kep., Ns., M,Kes.</div>
+        <div class="button-container">
+          <a href="#" class="button">Baca</a>
+          <a class='button' href='transaksi.html'>Pinjam</a>
+        </div>
+      </div>
+      <div class="book-card">
+        <img src="Buku_5.png" alt="Buku 5" class="book-image" />
+        <div class="book-title">Pengantar Ilmu Ekonomi</div>
+        <div class="book-author">Penulis: Lira Zohara</div>
+        <div class="button-container">
+          <a href="#" class="button">Baca</a>
+          <a class='button' href='transaksi.html'>Pinjam</a>
+        </div>
+      </div>
+      <div class="book-card">
+        <img src="Buku_6.png" alt="Buku 6" class="book-image" />
+        <div class="book-title">Belajar Dasar Pemograman dengan C++</div>
+        <div class="book-author">Penulis: Muhammad Taufiq Dwi Putra</div>
+        <div class="button-container">
+          <a href="#" class="button">Baca</a>
+          <a class='button' href='transaksi.html'>Pinjam</a>
+        </div>
+      </div>
+      <div class="book-card">
+        <img src="Buku_7.png" alt="Buku 7" class="book-image" />
+        <div class="book-title">Kepemimpinan dalam Organisasi</div>
+        <div class="book-author">Penulis: Budi Santoso</div>
+        <div class="button-container">
+          <a href="#" class="button">Baca</a>
+          <a class='button' href='transaksi.html'>Pinjam</a>
+        </div>
+      </div>
+      <div class="book-card">
+        <img src="Buku_8.png" alt="Buku 8" class="book-image" />
+        <div class="book-title">Jingga dan senja</div>
+        <div class="book-author">Penulis: Esti Kinasih</div>
+        <div class="button-container">
+          <a href="#" class="button">Baca</a>
+          <a class='button' href='transaksi.html'>Pinjam</a>
+        </div>
+      </div>
+      <div class="book-card">
+        <img src="Buku_9.png" alt="Buku 9" class="book-image" />
+        <div class="book-title">Ayah</div>
+        <div class="book-author">Penulis: Andrea Hirata</div>
+        <div class="button-container">
+          <a href="#" class="button">Baca</a>
+          <a class='button' href='transaksi.html'>Pinjam</a>
+        </div>
+      </div>
+      <div class="book-card">
+        <img src="Buku_10.png" alt="Buku 10" class="book-image" />
+        <div class="book-title">Cantik itu Luka</div>
+        <div class="book-author">Penulis: Eka Kurniawan</div>
+        <div class="button-container">
+          <a href="#" class="button">Baca</a>
+          <a class='button' href='transaksi.html'>Pinjam</a>
+        </div>
+      </div>
+
+    <div class="fun-fact">Buku adalah pintu menuju petualangan baru! 📚✨</div>
+  
+    <footer>
+        <p>&copy; 2025. MUHAMMAD FAQIH AR RASYID | 241011701201</p>
+      </footer>
+  </body>
+</html>

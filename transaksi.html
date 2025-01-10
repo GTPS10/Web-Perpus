@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WISCONSIN'S LIBRARY</title>
+</head>
+<body>
+  <style>
+  body {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    background-color: #f0f4f8; 
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header {
+    background-color: #00b7ff; 
+    color: white;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: navy; 
+  }
+
+  .logo img {
+    width: 50px; 
+  }
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: white; /
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+
+  nav ul li a:hover {
+    color: #00e1ff; 
+  }
+
+  main {
+    margin: 20px;
+    padding: 20px;
+    background-color: white; 
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px; 
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  h2 {
+    text-align: center;
+    color: #00c3ff; 
+  }
+
+  .input-group {
+    margin-bottom: 15px;
+  }
+
+  label {
+    margin-bottom: 5px;
+    display: block;
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 10s;
+  }
+
+  input[type="text"]:focus,
+  input[type="number"]:focus,
+  select:focus {
+    border-color: navy; 
+  }
+
+  button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #00b7ff; 
+    color: white;
+    font-family: "Comic Sans MS", cursive, sans-serif;;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+  button:hover {
+    background-color: navy; 
+    transform: scale(1.05); 
+  }
+
+  button:active {
+    transform: scale(0.95); 
+  }
+
+  .alert {
+    background-color: #ffcc00; 
+    color: black;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  footer {
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    width: 100%;
+    background-color:#00b7ff; 
+  }
+  </style>
+    <header>
+        <h1>Transaction</h1>
+    </header>
+    <nav>
+        <div class="logo">
+          <img src="Gambar_Perpus.png" alt="Logo Aplikasi Perpustakaan" />
+        </div>
+        <ul id="nav-links">
+          <li><a href='beranda.html'>Home</a></li>
+          <li><a href='profil.html'>Profile</a></li>
+          <li><a href='login.html'>Login</a></li>
+          <li><a href='koleksi.html'>Collection</a></li>
+          <li><a href='transaksi.html'>Transaction</a></li>
+        </ul>
+      </nav>
+
+    <main>
+        <div class="card">
+            <h2>Isi Data Transaksi</h2>
+            <form id="formTransaksi" onsubmit="tambahTransaksi(event)">
+              <label for="judul">Judul Buku:</label>
+              <input type="text" id="judul" placeholder="Judul buku" required>
+
+              <label for="penulis">Penulis:</label>
+              <input type="text" id="penulis" placeholder="Nama penulis" required>
+
+              <label for="jumlah">Jumlah:</label>
+              <input type="number" id="jumlah" min="1" placeholder="Jumlah" required>
+
+              <label for="kategori">Kategori:</label>
+              <select id="kategori" required>
+                  <option value="Default">Default</option>
+                  <option value="Beli">Beli</option>
+                  <option value="Peminjaman">Peminjaman</option>
+                  <option value="Pengembalian">Pengembalian</option>
+              </select>
+
+                </div>
+              <button onclick="window.location.href='Riwayat Transaksi.html';">Simpan Transaksi</button>
+            </form>
+
+        </div>
+
+        <!-- Alert Kustom -->
+        <div id="customAlert" class="alert" style="display: none">
+          <span id="alertMessage"></span>
+          <button id="closeAlert">Tutup</button>
+      </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025. MUHAMMAD FAQIH AR RASYID | 241011701201</p>
+  </footer>
+  <script>
+      function tambahTransaksi(event) {
+          event.preventDefault(); 
+
+          const judul = document.getElementById('judul').value;
+          const penulis = document.getElementById('penulis').value;
+          const jumlah = document.getElementById('jumlah').value;
+          const kategori = document.getElementById('kategori').value;
+
+          const transaksi = {
+              judul,
+              penulis,
+              jumlah,
+              kategori,
+              tanggal: new Date().toLocaleDateString() 
+          };
+
+          let riwayatTransaksi = JSON.parse(localStorage.getItem('riwayatTransaksi')) || [];
+
+          riwayatTransaksi.push(transaksi);
+          localStorage.setItem('riwayatTransaksi', JSON.stringify(riwayatTransaksi));
+
+          document.getElementById('alertMessage').innerText = "Transaksi berhasil disimpan!";
+          document.getElementById('customAlert').style.display = 'flex';
+
+          document.getElementById('formTransaksi').reset();
+      }
+
+      document.getElementById('closeAlert').onclick = function() {
+          document.getElementById('customAlert').style.display = 'none';
+      };
+  </script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+body {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    background-color: #f0f4f8; 
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header {
+    background-color: #00b7ff; 
+    color: white;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: navy; 
+  }
+
+  .logo img {
+    width: 50px; 
+  }
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: white; /
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+
+  nav ul li a:hover {
+    color: #00e1ff; 
+  }
+
+  main {
+    margin: 20px;
+    padding: 20px;
+    background-color: white; 
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px; 
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  h2 {
+    text-align: center;
+    color: #00c3ff; 
+  }
+
+  .input-group {
+    margin-bottom: 15px;
+  }
+
+  label {
+    margin-bottom: 5px;
+    display: block;
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 10s;
+  }
+
+  input[type="text"]:focus,
+  input[type="number"]:focus,
+  select:focus {
+    border-color: navy; 
+  }
+
+  button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #00b7ff; 
+    color: white;
+    font-family: "Comic Sans MS", cursive, sans-serif;;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+  button:hover {
+    background-color: navy; 
+    transform: scale(1.05); 
+  }
+
+  button:active {
+    transform: scale(0.95); 
+  }
+
+  .alert {
+    background-color: #ffcc00; 
+    color: black;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  footer {
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    width: 100%;
+    background-color:#00b7ff; 
+  }
